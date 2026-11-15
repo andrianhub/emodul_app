@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading), system-ui, sans-serif;
+  }
+}
+
+/* Subtle Islamic geometric pattern overlay for hero accents */
+.islamic-pattern {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='0.9' stroke-opacity='0.14'%3E%3Cpath d='M30 5 L37 23 L55 30 L37 37 L30 55 L23 37 L5 30 L23 23 Z'/%3E%3Ccircle cx='30' cy='30' r='6'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.parchment-dots {
+  background-image: radial-gradient(rgba(15, 81, 50, 0.06) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.font-arabic {
+  font-family: var(--font-arabic), serif;
+}
+
+/* Soundwave animations for active audio narration */
+@keyframes soundwave {
+  0%,
+  100% {
+    transform: scaleY(0.35);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
+
+.animate-wave-1 {
+  animation: soundwave 0.9s ease-in-out infinite;
+}
+.animate-wave-2 {
+  animation: soundwave 0.7s ease-in-out 0.15s infinite;
+}
+.animate-wave-3 {
+  animation: soundwave 1s ease-in-out 0.3s infinite;
+}
+.animate-wave-4 {
+  animation: soundwave 0.8s ease-in-out 0.45s infinite;
+}
+
+/* Custom warm scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3ede0;
+}
+::-webkit-scrollbar-thumb {
+  background: #c7bba4;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0f5132;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}
